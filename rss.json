@@ -1,0 +1,80 @@
+[
+    {
+        "id": "delfi.ee",
+        "web": "http://www.delfi.ee/",
+        "url": "http://feeds2.feedburner.com/delfiuudised",
+        "title": "Delfi",
+        "language": "et",
+        "domains": ["delfi.ee"]
+    },{
+        "id": "err.ee",
+        "web": "http://www.err.ee/",
+        "url": "http://uudised.err.ee/uudised_rss.php",
+        "language": "et",
+        "title": "ERR",
+        "domains": ["err.ee"]
+    },{
+        "id": "ekspress.ee",
+        "web": "http://www.ekspress.ee/",
+        "url": "http://feeds.feedburner.com/EestiEkspressFeed",
+        "language": "et",
+        "title": "Eesti Ekspress",
+        "domains": ["ekspress.ee"]
+    },{
+        "id": "epl.ee",
+        "web": "http://www.epl.ee/",
+        "url": "http://feeds.feedburner.com/eestipaevaleht",
+        "language": "et",
+        "title": "Eesti Päevaleht",
+        "domains": ["epl.ee"]
+    },{
+        "id": "kuulutaja.ee",
+        "web": "http://www.kuulutaja.ee/",
+        "url": "http://otsing.tahvel.info/feeds/kuulutaja.php",
+        "language": "et",
+        "title": "Kuulutaja",
+        "domains": ["kuulutaja.ee"]
+    },{
+        "id": "maaleht.ee",
+        "web": "http://www.maaleht.ee/",
+        "url": "http://feeds2.feedburner.com/maaleht",
+        "language": "et",
+        "title": "Maaleht",
+        "domains": ["maaleht.ee"]
+    },{
+        "id": "memokraat.ee",
+        "web": "http://www.memokraat.ee/",
+        "url": "http://feeds2.feedburner.com/Memokraat",
+        "language": "et",
+        "title": "Memokraat",
+        "domains": ["memokraat.ee"]
+    },{
+        "id": "postimees.ee",
+        "web": "http://www.postimees.ee/",
+        "url": "http://www.postimees.ee/rss/",
+        "language": "et",
+        "title": "Postimees Online",
+        "domains": ["postimees.ee"]
+    },{
+        "id": "ohtuleht.ee",
+        "web": "http://www.ohtuleht.ee/",
+        "url": "http://www.ohtuleht.ee/rss",
+        "language": "et",
+        "title": "Õhtuleht",
+        "domains": ["ohtuleht.ee"]
+    },{
+        "id": "opleht.ee",
+        "web": "http://www.opleht.ee/",
+        "url": "http://www.opleht.ee/rss.php",
+        "language": "et",
+        "title": "Õpetajate leht",
+        "domains": ["opleht.ee"]
+    },{
+        "id": "ap3.ee",
+        "web": "http://www.ap3.ee/",
+        "url": "http://aripaev.ee.feedsportal.com/c/33176/f/545915/index.rss",
+        "language": "et",
+        "title": "Äripäev",
+        "domains": ["ap3.ee"]
+    }
+]

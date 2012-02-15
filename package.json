@@ -1,0 +1,18 @@
+{
+    "name": "bfclient",
+    "version": "0.1.0",
+    "author" : "Andris Reinman",
+    "maintainers":[
+        {
+            "name":"andris",
+            "email":"andris@node.ee"
+        }
+    ],
+    "dependencies": {
+        "fetch": "*",
+        "nodepie": "*",
+        "node-gearman":"*",
+        "redis": "*",
+        "iconv": "*"
+    }
+}
