@@ -1,42 +1,81 @@
-var spawn = require("child_process").spawn;
+var spawn = require("child_process").spawn,
+    RAIServer = require("rai").RAIServer;
 
-createFeedbot();
-createDownloader();
+process.nextTick(createFeedbot);
+process.nextTick(createDownloader);
 
 function createFeedbot(){
     console.log("Starting feedbot");
     
-    var feedbot = spawn('node', [__dirname+'/feedbot.js'], {cwd: __dirname});
+    var feedbot = spawn('/usr/local/bin/node', [__dirname+'/feedbot.js'], {cwd: __dirname});
     
     feedbot.stdout.on('data', function (data) {
-        console.log('feedbot stdout: ' + (data || "").toString("utf-8").trim());
+        Tail('feedbot stdout: ' + (data || "").toString("utf-8").trim())
     });
     
     feedbot.stderr.on('data', function (data) {
-        console.log('feedbot stderr: ' + (data || "").toString("utf-8").trim());
+        Tail('feedbot stderr: ' + (data || "").toString("utf-8").trim());
     });
     
     feedbot.on('exit', function (code) {
-        console.log('feedbot exited with code ' + code);
+        Tail('feedbot exited with code ' + code);
         setTimeout(createFeedbot, 1000);
     });
 }
 
 function createDownloader(){
-    console.log("Starting downloader");
+    Tail("Starting downloader");
     
-    var downloader = spawn('node', [__dirname+'/downloader.js'], {cwd: __dirname});
+    var downloader = spawn('/usr/local/bin/node', [__dirname+'/downloader.js'], {cwd: __dirname});
     
     downloader.stdout.on('data', function (data) {
-        console.log('downloader stdout: ' + (data || "").toString("utf-8").trim());
+        Tail('downloader stdout: ' + (data || "").toString("utf-8").trim());
     });
     
     downloader.stderr.on('data', function (data) {
-        console.log('downloader stderr: ' + (data || "").toString("utf-8").trim());
+        Tail('downloader stderr: ' + (data || "").toString("utf-8").trim());
     });
     
     downloader.on('exit', function (code) {
-        console.log('downloader exited with code ' + code);
+        Tail('downloader exited with code ' + code);
         setTimeout(createDownloader, 1000);
     });
 }
+
+var tail = [];
+function Tail(msg){
+    tail.push(msg);
+    if(tail.length > 100){
+        tail.shift();
+    }
+    console.log(msg);
+}
+
+var server = new RAIServer();
+server.listen(8082);
+
+server.on("connect", function(client){
+
+    // Greet the client
+    client.send("Hello!");
+
+    // Wait for a command
+    client.on("command", function(command, payload){
+
+        command = (command || "").toString("utf-8").trim().toUpperCase();
+
+        if(command == "TAIL"){
+            for(var i=0, len=tail.length; i<len; i++){
+                client.send(new Buffer(tail[i], "utf-8"));
+            }
+            client.send("OK");
+        }else if(command == "QUIT"){
+            client.send("Goodbye");
+            client.end();
+        }else{
+            client.send("Unknown command");
+        }
+
+    });
+
+});

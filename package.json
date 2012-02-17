@@ -13,6 +13,7 @@
         "nodepie": "*",
         "node-gearman":"*",
         "redis": "*",
-        "iconv": "*"
+        "iconv": "*",
+        "rai": "*"
     }
 }
