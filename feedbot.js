@@ -1,6 +1,6 @@
 var fs = require("fs"),
-    feeder = require("./feeder"),
-    rssList = JSON.parse(fs.readFileSync("rss.json"));
+    feeder = require("./feed"),
+    rssList = JSON.parse(fs.readFileSync(__dirname + "/rss.json"));
 
 // start the bot
 initialize();

@@ -74,7 +74,7 @@ function feedFetcher(rss, callback){
                     site: rss.id,
                     title: item.getTitle().replace(/&amp;(?:amp;)?/g,"&").replace(/&quot;/g,'"'),
                     url: item.getPermalink().replace(/&amp;(?:amp;)?/g,"&"),
-                    date: item.getDate() || new Date(),
+                    date: Math.round((item.getDate() || new Date()).getTime()/1000),
                     language: rss.language || "et"
                 });
             }
