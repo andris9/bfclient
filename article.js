@@ -1,6 +1,6 @@
 
 var Gearman = require("node-gearman"),
-    feeder = require("./feeder"),
+    feeder = require("./feed"),
     urllib = require("url"),
     gearman = new Gearman("pangalink.net");
 
@@ -44,7 +44,7 @@ function fetchArticle(callback){
             
         });
     
-        job.setTimeout(15*1000, function(){
+        job.setTimeout(60 * 1000, function(){
             process.nextTick(callback.bind(this, new Error("Gearman worker timeout")));
         });
     
