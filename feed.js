@@ -95,7 +95,7 @@ function checkListForNewItems(list, callback, added){
     }
 
     var url = list.pop(),
-        hash = sha256(url.url);
+        hash = md5(url.url);
 
     redis.sismember("feed:urls", hash, function(err, isMember){
         if(Number(isMember)){
@@ -113,6 +113,6 @@ function checkListForNewItems(list, callback, added){
     });
 }
 
-function sha256(str){
-    return crypto.createHash("sha256").update(str).digest("hex");
+function md5(str){
+    return crypto.createHash("md5").update(str).digest("hex");
 }

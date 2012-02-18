@@ -34,7 +34,7 @@ function fetchArticle(callback){
             fetchLemma(article.title+" "+response.article, function(err, lemma){
                 process.nextTick(callback.bind(this, null, {
                     title: article.title,
-                    postDate: article.date,
+                    time: article.date,
                     domain: domain,
                     url: parseUrl(response.url || article.url),
                     html: response.article,
