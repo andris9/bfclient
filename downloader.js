@@ -12,6 +12,11 @@ function mainloop(){
             setTimeout(mainloop, 300);
             return;
         }
+        if(!article){
+            //nothing found
+            setTimeout(mainloop, 1*1000);
+            return;
+        }
         
         console.log("Publishing "+article.title);
         redis.publish("article", JSON.stringify(article));
