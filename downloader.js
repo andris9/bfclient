@@ -1,4 +1,19 @@
 
+// handle parent death
+(function(){
+    var FFI = require('node-ffi');
+    var current = new FFI.Library(null, {"prctl": ["int32", ["int32", "uint32"]]})
+    
+    //1: PR_SET_PDEATHSIG, 15: SIGTERM
+    var returned = current.prctl(1,15);
+    
+    process.on('SIGTERM',function(){
+            //do something interesting
+            process.exit(1);
+    });
+})();
+
+
 var redis = require("redis").createClient(),
     articlelib = require("./article");
 

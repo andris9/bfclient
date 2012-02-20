@@ -1,80 +1,216 @@
-[
-    {
-        "id": "delfi.ee",
-        "web": "http://www.delfi.ee/",
-        "url": "http://feeds2.feedburner.com/delfiuudised",
-        "title": "Delfi",
-        "language": "et",
-        "domains": ["delfi.ee"]
-    },{
-        "id": "err.ee",
-        "web": "http://www.err.ee/",
-        "url": "http://uudised.err.ee/uudised_rss.php",
-        "language": "et",
-        "title": "ERR",
-        "domains": ["err.ee"]
-    },{
-        "id": "ekspress.ee",
-        "web": "http://www.ekspress.ee/",
-        "url": "http://feeds.feedburner.com/EestiEkspressFeed",
-        "language": "et",
-        "title": "Eesti Ekspress",
-        "domains": ["ekspress.ee"]
-    },{
-        "id": "epl.ee",
-        "web": "http://www.epl.ee/",
-        "url": "http://feeds.feedburner.com/eestipaevaleht",
-        "language": "et",
-        "title": "Eesti Päevaleht",
-        "domains": ["epl.ee"]
-    },{
-        "id": "kuulutaja.ee",
-        "web": "http://www.kuulutaja.ee/",
-        "url": "http://otsing.tahvel.info/feeds/kuulutaja.php",
-        "language": "et",
-        "title": "Kuulutaja",
-        "domains": ["kuulutaja.ee"]
-    },{
-        "id": "maaleht.ee",
-        "web": "http://www.maaleht.ee/",
-        "url": "http://feeds2.feedburner.com/maaleht",
-        "language": "et",
-        "title": "Maaleht",
-        "domains": ["maaleht.ee"]
-    },{
-        "id": "memokraat.ee",
-        "web": "http://www.memokraat.ee/",
-        "url": "http://feeds2.feedburner.com/Memokraat",
-        "language": "et",
-        "title": "Memokraat",
-        "domains": ["memokraat.ee"]
-    },{
-        "id": "postimees.ee",
-        "web": "http://www.postimees.ee/",
-        "url": "http://www.postimees.ee/rss/",
-        "language": "et",
-        "title": "Postimees Online",
-        "domains": ["postimees.ee"]
-    },{
-        "id": "ohtuleht.ee",
-        "web": "http://www.ohtuleht.ee/",
-        "url": "http://www.ohtuleht.ee/rss",
-        "language": "et",
-        "title": "Õhtuleht",
-        "domains": ["ohtuleht.ee"]
-    },{
-        "id": "opleht.ee",
-        "web": "http://www.opleht.ee/",
-        "url": "http://www.opleht.ee/rss.php",
-        "language": "et",
-        "title": "Õpetajate leht",
-        "domains": ["opleht.ee"]
-    },{
-        "id": "ap3.ee",
-        "web": "http://www.ap3.ee/",
-        "url": "http://aripaev.ee.feedsportal.com/c/33176/f/545915/index.rss",
-        "language": "et",
-        "title": "Äripäev",
-        "domains": ["ap3.ee"]
-    }
-]
+[{
+    "id": "delfi.ee",
+    "web": "http://www.delfi.ee/",
+    "url": "http://feeds2.feedburner.com/delfiuudised",
+    "title": "Delfi",
+    "language": "et",
+    "domains": ["delfi.ee"]
+}, {
+    "id": "delfi.ee",
+    "web": "http://www.delfi.ee/",
+    "url": "http://feeds2.feedburner.com/delfimajandus",
+    "language": "et",
+    "title": "Delfi"
+}, {
+    "id": "e24.ee",
+    "web": "http://www.e24.ee/",
+    "url": "http://www.e24.ee/rss/",
+    "language": "et",
+    "title": "E24",
+    "domains": ["e24.ee"]
+}, {
+    "id": "uudisvoog.postimees.ee",
+    "web": "http://www.uudisvoog.postimees.ee/",
+    "url": "http://otsing.tahvel.info/feeds/postimehe_uudisvoog.php",
+    "language": "et",
+    "title": "E24 - firmateated",
+    "domains": ["uudisvoog.postimees.ee"]
+}, {
+    "id": "err.ee",
+    "web": "http://www.err.ee/",
+    "url": "http://uudised.err.ee/uudised_rss.php",
+    "language": "et",
+    "title": "ERR",
+    "domains": ["err.ee"]
+}, {
+    "id": "sport.err.ee",
+    "web": "http://sport.err.ee/",
+    "title": "ERR Sport",
+    "url": "http://sport.err.ee/rss",
+    "language": "et",
+    "domains": ["sport.err.ee"]
+}, {
+    "id": "teadus.err.ee",
+    "web": "http://teadus.err.ee/",
+    "title": "ERR Teadus & Haridus",
+    "url": "http://teadus.err.ee/rss",
+    "language": "et",
+    "domains": ["teadus.err.ee"]
+}, {
+    "id": "ekspress.ee",
+    "web": "http://www.ekspress.ee/",
+    "url": "http://feeds.feedburner.com/EestiEkspressFeed",
+    "language": "et",
+    "title": "Eesti Ekspress",
+    "domains": ["ekspress.ee"]
+}, {
+    "id": "epl.ee",
+    "web": "http://www.epl.ee/",
+    "url": "http://feeds.feedburner.com/eestipaevaleht",
+    "language": "et",
+    "title": "Eesti Päevaleht",
+    "domains": ["epl.ee"]
+}, {
+    "id": "elu24.ee",
+    "web": "http://www.elu24.ee/",
+    "url": "http://www.elu24.ee/rss/",
+    "title": "Elu24",
+    "domains": ["elu24.ee"]
+}, {
+    "id": "forte.ee",
+    "web": "http://www.forte.ee/",
+    "url": "http://feeds2.feedburner.com/forteuudised",
+    "language": "et",
+    "title": "Forte",
+    "domains": ["forte.ee", "forte.delfi.ee"]
+}, {
+    "id": "ilmajaam.ee",
+    "web": "http://www.ilmajaam.ee/",
+    "url": "http://www.ilmajaam.ee/rss/",
+    "language": "et",
+    "title": "Ilmajaam",
+    "domains": ["ilmajaam.ee"]
+}, {
+    "id": "kes-kus.ee",
+    "web": "http://www.kes-kus.ee/",
+    "url": "http://otsing.tahvel.info/feeds/keskus.php",
+    "language": "et",
+    "title": "Kes-Kus",
+    "domains": ["kes-kus.ee"]
+}, {
+    "id": "kuulutaja.ee",
+    "web": "http://www.kuulutaja.ee/",
+    "url": "http://otsing.tahvel.info/feeds/kuulutaja.php",
+    "language": "et",
+    "title": "Kuulutaja",
+    "domains": ["kuulutaja.ee"]
+}, {
+    "id": "maaleht.ee",
+    "web": "http://www.maaleht.ee/",
+    "url": "http://feeds2.feedburner.com/maaleht",
+    "language": "et",
+    "title": "Maaleht",
+    "domains": ["maaleht.ee"]
+}, {
+    "id": "memokraat.ee",
+    "web": "http://www.memokraat.ee/",
+    "url": "http://feeds2.feedburner.com/Memokraat",
+    "language": "et",
+    "title": "Memokraat",
+    "domains": ["memokraat.ee"]
+}, {
+    "id": "naine24.ee",
+    "web": "http://www.naine24.ee/",
+    "url": "http://www.naine24.ee/rss/",
+    "language": "et",
+    "title": "Naine24",
+    "domains": ["naine24.ee"]
+}, {
+    "id": "naistekas.ee",
+    "web": "http://www.naistekas.ee/",
+    "url": "http://feeds.feedburner.com/naistekas",
+    "language": "et",
+    "title": "Naistekas",
+    "domains": ["naistekas.ee", "naistekas.delfi.ee"]
+}, {
+    "id": "postimees.ee",
+    "web": "http://www.postimees.ee/",
+    "url": "http://www.postimees.ee/rss/",
+    "language": "et",
+    "title": "Postimees Online",
+    "domains": ["postimees.ee"]
+}, {
+    "id": "postimees.ee",
+    "web": "http://www.postimees.ee/",
+    "url": "http://arvamus.postimees.ee/rss/",
+    "language": "et",
+    "title": "Postimees Online",
+    "domains": ["arvamus.postimees.ee"]
+}, {
+    "id": "publik.ee",
+    "web": "http://www.publik.ee/",
+    "url": "http://feeds2.feedburner.com/publikuudised",
+    "language": "et",
+    "title": "Publik",
+    "domains": ["publik.ee", "publik.delfi.ee"]
+}, {
+    "id": "parnupostimees.ee",
+    "web": "http://www.parnupostimees.ee/",
+    "url": "http://www.parnupostimees.ee/rss/",
+    "language": "et",
+    "title": "Pärnu Postimees",
+    "domains": ["parnupostimees.ee"]
+}, {
+    "id": "sakala.ajaleht.ee",
+    "web": "http://www.sakala.ajaleht.ee/",
+    "url": "http://www.sakala.ajaleht.ee/rss/",
+    "language": "et",
+    "title": "Sakala",
+    "domains": ["sakala.ajaleht.ee"]
+}, {
+    "id": "sirp.ee",
+    "web": "http://www.sirp.ee/",
+    "url": "http://otsing.tahvel.info/feeds/sirp.php",
+    "language": "et",
+    "title": "Sirp",
+    "domains": ["sirp.ee"]
+}, {
+    "id": "tallinnapostimees.ee",
+    "web": "http://www.tallinnapostimees.ee/",
+    "url": "http://www.tallinnapostimees.ee/rss/",
+    "language": "et",
+    "title": "Tallinna Postimees",
+    "domains": ["tallinnapostimees.ee"]
+}, {
+    "id": "tarbija24.ee",
+    "web": "http://www.tarbija24.ee/",
+    "url": "http://www.tarbija24.ee/rss/",
+    "language": "et",
+    "title": "Tarbija24",
+    "domains": ["tarbija24.ee"]
+}, {
+    "id": "tartupostimees.ee",
+    "web": "http://www.tartupostimees.ee/",
+    "url": "http://www.tartupostimees.ee/rss/",
+    "language": "et",
+    "title": "Tartu Postimees",
+    "domains": ["tartupostimees.ee"]
+}, {
+    "id": "ohtuleht.ee",
+    "web": "http://www.ohtuleht.ee/",
+    "url": "http://www.ohtuleht.ee/rss",
+    "language": "et",
+    "title": "Õhtuleht",
+    "domains": ["ohtuleht.ee"]
+}, {
+    "id": "opleht.ee",
+    "web": "http://www.opleht.ee/",
+    "url": "http://www.opleht.ee/rss.php",
+    "language": "et",
+    "title": "Õpetajate leht",
+    "domains": ["opleht.ee"]
+}, {
+    "id": "virumaateataja.ee",
+    "web": "http://www.virumaateataja.ee/",
+    "url": "http://www.virumaateataja.ee/rss/",
+    "language": "et",
+    "title": "Virumaa Teataja",
+    "domains": ["virumaateataja.ee"]
+}, {
+    "id": "ap3.ee",
+    "web": "http://www.ap3.ee/",
+    "url": "http://aripaev.ee.feedsportal.com/c/33176/f/545915/index.rss",
+    "language": "et",
+    "title": "Äripäev",
+    "domains": ["ap3.ee"]
+}]

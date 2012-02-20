@@ -3,6 +3,8 @@ var spawn = require("child_process").spawn,
 
 process.nextTick(createFeedbot);
 process.nextTick(createDownloader);
+process.nextTick(createStore);
+process.nextTick(createAPI);
 
 function createFeedbot(){
     console.log("Starting feedbot");
@@ -42,10 +44,44 @@ function createDownloader(){
     });
 }
 
+function createStore(){
+    var store = spawn('/usr/local/bin/node', [__dirname+'/../bfstore/store.js'], {cwd: __dirname+"/../bfstore"});
+    
+    store.stdout.on('data', function (data) {
+        Tail('store stdout: ' + (data || "").toString("utf-8").trim());
+    });
+    
+    store.stderr.on('data', function (data) {
+        Tail('store stderr: ' + (data || "").toString("utf-8").trim());
+    });
+    
+    store.on('exit', function (code) {
+        Tail('store exited with code ' + code);
+        setTimeout(createStore, 1000);
+    });
+}
+
+function createAPI(){
+    var api = spawn('/usr/local/bin/node', [__dirname+'/../bfstore/api.js'], {cwd: __dirname+"/../bfapi"});
+    
+    api.stdout.on('data', function (data) {
+        Tail('api stdout: ' + (data || "").toString("utf-8").trim());
+    });
+    
+    api.stderr.on('data', function (data) {
+        Tail('api stderr: ' + (data || "").toString("utf-8").trim());
+    });
+    
+    api.on('exit', function (code) {
+        Tail('api exited with code ' + code);
+        setTimeout(createAPI, 1000);
+    });
+}
+
 var tail = [];
 function Tail(msg){
     tail.push(msg);
-    if(tail.length > 100){
+    if(tail.length > 250){
         tail.shift();
     }
     console.log(msg);
